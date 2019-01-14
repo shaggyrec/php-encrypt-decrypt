@@ -1,6 +1,6 @@
 {
     "name": "shaggyrec/php-encrypt-decrypt",
-    "description": "Simple PHP encrypter-decrypter",
+    "description": "Simple PHP encryptor-decryptor",
     "type": "library",
     "authors": [
         {

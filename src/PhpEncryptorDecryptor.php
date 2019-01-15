@@ -39,6 +39,10 @@ class PhpEncryptorDecryptor
         );
     }
 
+    /**
+     * @param $string
+     * @return string|false
+     */
     public function decrypt($string)
     {
         return openssl_decrypt(
@@ -50,11 +54,19 @@ class PhpEncryptorDecryptor
         );
     }
 
+    /**
+     * @param $secretKey
+     * @return string
+     */
     private static function secretKeyHash($secretKey)
     {
         return hash('sha256', $secretKey);
     }
 
+    /**
+     * @param $secretIv
+     * @return bool|string
+     */
     private static function secretIvHash($secretIv)
     {
         return substr(hash('sha256', $secretIv), 0, 16);
